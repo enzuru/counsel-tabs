@@ -1,4 +1,4 @@
-;;; counsel-tabs.el --- company-mode completion for most major terminal spellcheckers
+;;; counsel-tabs.el --- counsel support for tabs
 
 ;; Author: Ahmed Khanzada
 
@@ -22,3 +22,5 @@
                       (tab-bar-select-tab (1+ (or (tab-bar--tab-index-by-name name) 0)))
                       )
             :caller 'counsel-describe-tab))
+
+(provide 'counsel-tabs)
