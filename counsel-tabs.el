@@ -19,8 +19,7 @@
             :history 'counsel-describe-symbol-history
             :require-match t
             :action (lambda (name)
-                      (tab-bar-select-tab (1+ (or (tab-bar--tab-index-by-name name) 0)))
-                      )
+                      (tab-bar-select-tab (1+ (or (tab-bar--tab-index-by-name name) 0))))
             :caller 'counsel-describe-tab))
 
 (provide 'counsel-tabs)
