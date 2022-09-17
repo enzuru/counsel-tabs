@@ -1,6 +1,6 @@
 ;;; counsel-tabs.el --- counsel support for tabs
 
-;; Copyright (C) enzu.ru
+;; Copyright (C) Salma Karama, LLC
 ;; SPDX-License-Identifier: GPL-3.0
 
 ;;; Code:
