@@ -1,9 +1,7 @@
 ;;; counsel-tabs.el --- counsel support for tabs
 
-;; Author: Ahmed Khanzada
-
-;;; Commentary:
-;;
+;; Copyright (C) enzu.ru
+;; SPDX-License-Identifier: GPL-3.0
 
 ;;; Code:
 
