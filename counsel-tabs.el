@@ -39,7 +39,6 @@
                                           (alist-get 'name tab))
                                         (counsel-tabs-recent-tabs))))
               recent-tabs)
-            ;; :keymap counsel-describe-map
             :history 'counsel-describe-symbol-history
             :require-match t
             :action (lambda (name)
