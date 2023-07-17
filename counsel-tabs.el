@@ -1,14 +1,30 @@
-;;; counsel-tabs.el --- counsel support for tabs
+;;; counsel-tabs.el --- Counsel support for tabs  -*- lexical-binding:t; coding:utf-8 -*-
 
 ;; Copyright (C) enzu.ru
+
+;; Homepage: https://enzu.ru
+;; Keywords: convenience matching
+
+;; Package-Version: 1.0.0
+;; Package-Requires: ((emacs "27.1"))
+
 ;; SPDX-License-Identifier: GPL-3.0
 
+;;; Commentary:
+
+;; A simple way for searching tab names with counsel
+
+;;; Code:
+
+(require 'ivy)
+
 (defun counsel-tabs-index-by-name (name &optional tabs frame)
-  ;; Return the index of TAB by the its NAME.
+  "Index TABS by NAME for FRAME."
   (seq-position (or tabs (funcall tab-bar-tabs-function frame))
                 name (lambda (a b) (equal (alist-get 'name a) b))))
 
 (defun counsel-tabs-recent-tabs (&optional tabs frame)
+  "Get a list of TABS for FRAME organization by time."
   (let* ((tabs (or tabs (funcall tab-bar-tabs-function frame))))
     (seq-sort-by (lambda (tab) (alist-get 'time tab)) #'>
                  (seq-remove (lambda (tab)
@@ -31,3 +47,5 @@
             :caller 'counsel-describe-tab))
 
 (provide 'counsel-tabs)
+
+;;; counsel-tabs.el ends here
