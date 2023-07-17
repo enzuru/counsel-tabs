@@ -2,7 +2,7 @@
 
 ;; Copyright (C) enzu.ru
 
-;; Homepage: https://enzu.ru
+;; Homepage: https://github.com/enzuru/counsel-tabs
 ;; Keywords: convenience matching
 
 ;; Package-Version: 1.0.0
